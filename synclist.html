@@ -1,0 +1,22 @@
+<head>
+  <title>synclist</title>
+</head>
+
+<body>
+  {{> list}}
+</body>
+
+<template name='list'>
+  <ul>
+  {{#each listItems}}
+      <li>
+        <input type="checkbox" name="item" value='{{name}}'>{{name}} - {{quantity}}
+      </li>
+  {{/each}}
+    <li>
+      <input type='text' id='new-item' placeholder='Enter item name'/>
+      <input type='text' id='quantity' placeholder='Quantity'/>
+      <input type='submit' id='add' value='Add'/>
+    </li>
+  </ul>
+</template>

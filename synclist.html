@@ -3,20 +3,40 @@
 </head>
 
 <body>
-  {{> list}}
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-1'>
+        <nav class='navbar navbar-default' role='navigation'>
+          <div class="navbar-header">
+            <a class='navbar-brand' href='#'><span class='text-center'>Grocery List</span></a>
+          </div>
+        </nav>
+
+        {{> list}}
+      </div>
+    </div>
+  </div>
+
 </body>
 
 <template name='list'>
   <ul>
-  {{#each listItems}}
+    {{#each listItems}}
       <li>
-        <input type="checkbox" name="item" value='{{name}}'>{{name}} - {{quantity}}
+        <div class='checkbox'>
+          <input type="checkbox" name="item" value='{{name}}'>{{name}} - {{quantity}}
+        </div>
+
       </li>
-  {{/each}}
+    {{/each}}
     <li>
-      <input type='text' id='new-item' placeholder='Enter item name'/>
-      <input type='text' id='quantity' placeholder='Quantity'/>
-      <input type='submit' id='add' value='Add'/>
+      <span class='form-inline'>
+          <input type='text' id='new-item' placeholder='Item name'/>
+          <input type='text' id='quantity' placeholder='Qty'/>
+      </span>
+      <button type='submit' class='btn btn-default' id='add'>Add</button>
     </li>
   </ul>
+
+
 </template>

@@ -1,1 +1,21 @@
 /* CSS declarations go here */
+li {
+  list-style: none;
+  padding: 5px;
+}
+
+input#new-item {
+  width: 100px;
+}
+
+input#quantity {
+  width: 25px;
+}
+
+/*.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {float:none;}*/
